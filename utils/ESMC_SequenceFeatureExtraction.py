@@ -170,6 +170,7 @@ if __name__ == '__main__':
     parser.add_argument('save_pkl_path', type=str, help='Output path')
     parser.add_argument('-cuda','--cuda_devices', type=str, default="-1", help='Comma-separated list of cuda device ids (e.g., "0,1,2") or "-1" for CPU')
     parser.add_argument('--update', action='store_true', help='Update existing features')
+    parser.add_argument('--gpu', action='store_true')
     
     args = parser.parse_args()
     main(args)
