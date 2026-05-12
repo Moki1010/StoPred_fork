@@ -148,7 +148,7 @@ loading from remote instead...
         protein_tensor = client.encode(protein)
         logits_output = client.logits(
             protein_tensor, 
-            LogitsConfig(sequence=True, return_embeddings=True)
+            LogitsConfig(sequence=True, return_embeddings=True, return_hidden_states = True)
         )
         # get last 3 hidden states
         last_3_hidden_states = logits_output.hidden_states[-3:]
